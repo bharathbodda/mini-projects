@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tic-Tac-Toe
+        </title>
+        <style>
+           .ttt-grid{
+            height: 620px;
+            width: 850px;
+            background-color: black;
+           }
+           .b{ 
+             height: 200px;
+             width: 280px;
+             margin-left: 0px;
+             margin-top: 5px;
+             margin-right: 0px;
+             border-width: 0px 10px 10px 0px;
+           }
+           .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9{
+            font-size: 100px;
+            font-weight: bold;
+           }
+           .winner-para{
+             font-size: 50px;
+             font-weight: bold;
+             color: green;
+             margin-left: 500px;
+           }
+        </style>
+    </head>
+    <body>
+        <center><h1 style="color:blue">Tic-Tac-Toe</h1></center>
+        <div class="ttt-grid">
+            <div class="row1">
+                <button class="b b1">.</button>
+                <button class="b b2">.</button>
+                <button class="b b3">.</button>
+            </div>
+            <div class="row1">
+                <button class="b b4">.</button>
+                <button class="b b5">.</button>
+                <button class="b b6">.</button>
+            </div>
+            <div class="row1">
+                <button class="b b7">.</button>
+                <button class="b b8">.</button>
+                <button class="b b9">.</button>
+            </div>
+        </div>
+        <p class="winner-class winner-para"></p>
+        <script>
+            let a1 = '';
+            let a2 = '';
+            let a3 = '';
+            let a4 = '';
+            let a5 = '';
+            let a6 = '';
+            let a7 = '';
+            let a8 = '';
+            let a9 = '';
+            let button1 = 'off';
+            let button2 = 'off';
+            let button3 = 'off';
+            let button4 = 'off';
+            let button5 = 'off';
+            let button6 = 'off';
+            let button7 = 'off';
+            let button8 = 'off';
+            let button9 = 'off';
+            let count = 0;
+            document.querySelector('.b1')
+              .addEventListener('click',() => {
+              if(button1 === 'off')
+              {
+                choicemove();
+                a1 = document.querySelector('.b1')
+                .innerHTML = `${choice}`;
+                button1 = 'on';
+                count++;
+                winner();
+              }});
+              document.querySelector('.b2')
+               .addEventListener('click',() => {
+                if(button2 === 'off')
+               {
+                  choicemove();
+                  a2 = document.querySelector('.b2')
+                 .innerHTML = `${choice}`;
+                 button2 = 'on';
+                 count++;
+                 winner();
+               }});
+              document.querySelector('.b3')
+               .addEventListener('click',() => {
+                if(button3 === 'off')
+               {
+                  choicemove();
+                  a3 = document.querySelector('.b3')
+                 .innerHTML = `${choice}`;
+                 button3 = 'on';
+                 count++;
+                  winner();
+               }});
+              document.querySelector('.b4')
+               .addEventListener('click',() => {
+                if(button4 === 'off')
+                {
+                  choicemove();
+                  a4 = document.querySelector('.b4')
+                 .innerHTML = `${choice}`;
+                 button4 = 'on';
+                 count++;
+                 winner();
+                }}); 
+              document.querySelector('.b5')
+               .addEventListener('click',() => {
+                if(button5 === 'off')
+                {
+                  choicemove();
+                  a5 = document.querySelector('.b5')
+                 .innerHTML = `${choice}`;
+                 button5 = 'on';
+                 count++;
+                 winner();
+                }});  
+              document.querySelector('.b6')
+               .addEventListener('click',() => {
+                if(button6 === 'off')
+               {
+                  choicemove();
+                  a6 = document.querySelector('.b6')
+                 .innerHTML = `${choice}`;
+                 button6 = 'on';
+                 count++;
+                 winner();
+                }});
+              document.querySelector('.b7')
+               .addEventListener('click',() => {
+                if(button7 === 'off')
+                {
+                  choicemove();
+                  a7 = document.querySelector('.b7')
+                 .innerHTML = `${choice}`;
+                 button7 = 'on';
+                 count++;
+                 winner();
+                }});
+              document.querySelector('.b8')
+               .addEventListener('click',() => {
+                if(button8 === 'off')
+                {
+                  choicemove();
+                  a8 = document.querySelector('.b8')
+                 .innerHTML = `${choice}`;
+                 button8 = 'on';
+                 count++;
+                 winner();
+                }});
+              document.querySelector('.b9')
+               .addEventListener('click',() => {
+                if(button9 === 'off')
+                {
+                  choicemove();
+                  a9 = document.querySelector('.b9')
+                 .innerHTML = `${choice}`;
+                 button9 = 'on';
+                 count++;
+                 winner();
+                }});      
+            let choice = '';
+            function choicemove()
+            {
+               if(choice === '')
+               {
+                  choice = 'o';
+               }
+               else if(choice === 'o')
+               {
+                  choice = 'x';
+               }
+               else if(choice === 'x'){
+                  choice = 'o';
+               }
+            } 
+            function winner()
+            {
+                if(a1==='o'&&a2==='o'&&a3==='o' || a4==='o'&&a5==='o'&&a6==='o'||a7==='o'&&a8==='o'&&a9==='o'||a1==='o'&&a4==='o'&&a7==='o'||a2==='o'&&a5==='o'&&a8==='o'||a3==='o'&&a6==='o'&&a9==='o'||a1==='o'&&a5==='o'&&a9==='o'||a3==='o'&&a5==='o'&&a7==='o')
+                {
+                    document.querySelector('.winner-class')
+                      .innerHTML = `o player has won the game.`;
+                    button1 = 'on';
+                    button2 = 'on';
+                    button3 = 'on';
+                    button4 = 'on';
+                    button5 = 'on';
+                    button6 = 'on';
+                    button7 = 'on';
+                    button8 = 'on';
+                    button9 = 'on';
+                    count = 0;
+                }
+                else if(a1==='x'&&a2==='x'&&a3==='x' || a4==='x'&&a5==='x'&&a6==='x'||a7==='x'&&a8==='x'&&a9==='x'||a1==='x'&&a4==='x'&&a7==='x'||a2==='x'&&a5==='x'&&a8==='x'||a3==='x'&&a6==='x'&&a9==='x'||a1==='x'&&a5==='x'&&a9==='x'||a3==='x'&&a5==='x'&&a7==='x')
+                {
+                    document.querySelector('.winner-class')
+                      .innerHTML = `x player has won the game.`;
+                    button1 = 'on';
+                    button2 = 'on';
+                    button3 = 'on';
+                    button4 = 'on';
+                    button5 = 'on';
+                    button6 = 'on';
+                    button7 = 'on';
+                    button8 = 'on';
+                    button9 = 'on';
+                    count = 0;
+                } 
+                if(count === 9)
+                {
+                  document.querySelector('.winner-class')
+                   .innerHTML = `It's a tie game.`;
+                }
+            }
+        </script>
+    </body>
+</html>

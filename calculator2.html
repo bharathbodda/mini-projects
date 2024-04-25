@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .calci-grid{
+                background-color: blue;
+                width: 400px;
+                height: 550px;
+                margin-left: 620px;
+                margin-top: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .input-grid{
+                background-color: yellow;
+                width: 320px;
+                height: 100px;
+                margin-left: 20px;
+                margin-bottom: 5px;
+                padding-top: 5px;
+            }
+            .display-input{
+                width: 300px;
+                height: 80px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 5px;
+                font-size: 20px;
+            }
+            .output-grid{
+                background-color:blueviolet;
+                width: 320px;
+                height: 70px;
+                margin-left: 20px;
+                margin-top: 5px;
+                font-size: 25px;
+            }
+            .screen-grid{
+                width: 350px;
+                height: 200px;
+                margin-left: 20px;
+            }
+            .a{
+                margin-top: 10px;
+                margin-left: 30px;
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .b{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="margin-left: 660px;">Calculator</h1>
+        <div class="calci-grid">
+            <div class="screen-grid">
+                <div class="input-grid">
+                    <p class="display-input"></p>
+                </div>
+                <div class="output-grid">
+                    <p class="display-output"></p>
+                </div>
+            </div>
+            <button class="a c1">C</button> 
+            <button class="a c2">&#x25c0;</button>
+            <button class="a c3"> &#x25;</button>
+            <button class="a c4">&#247;</button>
+            <button class="a c5">7</button>
+            <button class="a c6">8</button>
+            <button class="a c7">9</button>
+            <button class="a c8">&times;</button>
+            <button class="a c9">4</button>
+            <button class="a c10">5</button>
+            <button class="a c11">6</button>
+            <button class="a c12">&#8722;</button>
+            <button class="a c13">1</button>
+            <button class="a c14">2</button>
+            <button class="a c15">3</button>
+            <button class="a c16">&plus;</button>
+            <button class="a c17">C</button>
+            <button class="a c18">0</button>
+            <button class="a c19">.</button>
+            <button class="a b c20">=</button>
+        </div>
+        <script>
+            let str = ``;
+            document.querySelectorAll('.c5')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `7`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c6')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `8`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               }); 
+            document.querySelectorAll('.c7')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `9`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c9')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `4`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c10')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `5`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               }); 
+            document.querySelectorAll('.c11')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `6`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               }); 
+            document.querySelectorAll('.c13')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `1`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c14')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `2`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c15')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `3`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c18')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `0`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c17')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str =``;
+                    let str6 = ``;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                    document.querySelector('.display-output')
+                       .innerHTML = `${str6}`;
+                });
+               });
+            document.querySelectorAll('.c1')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str =``;
+                    let str5 = ``;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                    document.querySelector('.display-output')
+                       .innerHTML = `${str5}`;
+                });
+               });
+            document.querySelectorAll('.c4')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `/`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c8')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `*`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c12')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `-`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c16')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `+`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c19')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `.`;
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str}`;
+                });
+               });
+            document.querySelectorAll('.c20')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    resultstr(str);
+                });
+               });
+            document.querySelectorAll('.c2')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    let str7 = ``;
+                    for(let i=0;i<str.length-1;i++)
+                    {
+                       str7 += str[i];
+                    } 
+                    document.querySelector('.display-input')
+                       .innerHTML = `${str7}`;
+                    str = str7;
+                });
+               });
+            document.querySelectorAll('.c3')
+               .forEach((button) => {
+                button.addEventListener('click',() => {
+                    str += `%`;
+                    resultstr(str);
+                });
+               });
+            const arr = [];
+            function resultstr(str){
+               const arr = [];
+               let str1 = ``;
+               for(let i=0;i<str.length;i++)
+               {
+                  if(str[i] === '/' || str[i] === '*' || str[i] === '+' || str[i] === '-')
+                  {
+                     if(str1 !== ``)
+                     {
+                        arr.push(str1);
+                     }
+                     arr.push(str[i]);
+                     str1 = ``;
+                  }
+                  else{
+                     str1 += str[i];
+                  }
+               }
+               arr.push(str1);
+               while(arr.includes('/'))
+               {
+                  let i = arr.indexOf('/');
+                  let b = 1;
+                  let f=0,g=0;
+                  while(arr[i-b] === 'a')
+                  {
+                     b++;
+                  }
+                  let e = b+1;
+                  if((i-e)>0)
+                  {
+                     while(arr[i-e] === 'a')
+                     {
+                        e++;
+                        if((i-e)<0)
+                        {
+                           break;
+                        }
+                     }
+                     if(arr[i-e] === '-')
+                     {
+                        f = 1;
+                        arr[i-e] = 'a';
+                     }
+                  }
+                  let c = 1;
+                  while(arr[i+c] === 'a' || arr[i+c] === '-')
+                  {
+                     if(arr[i+c] === '-')
+                     {
+                        g = 1;
+                        arr[i+c] = 'a';
+                     }
+                     c++;
+                  }
+                  if((f===0 && g===0) || (f===1 && g===1))
+                  {
+                     let a = parseFloat(arr[i-b])/parseFloat(arr[i+c]);
+                     arr[i-b] = `a`;
+                     arr[i+c] = `a`;
+                     arr[i] = a.toString(10);
+                  }
+                  else if((f===0 && g === 1) || (f===1 && g === 0))
+                  {
+                     let a = parseFloat(arr[i-b])/parseFloat(arr[i+c]);
+                     arr[i-b] = `-`;
+                     arr[i+c] = `a`;
+                     arr[i] = a.toString(10);
+                  }
+               }
+               while(arr.includes('*'))
+               {
+                  let i = arr.indexOf('*');
+                  let b = 1;
+                  let f=0,g=0;
+                  while(arr[i-b] === 'a')
+                  {
+                     b++;
+                  }
+                  let e = b+1; 
+                  if((i-e)>=0)
+                  {
+                     while(arr[i-e] === 'a')
+                     {
+                        e++;
+                        if((i-e)<0)
+                        {
+                           break;
+                        }
+                     }
+                     if(arr[i-e] === '-')
+                     {
+                        f = 1;
+                        arr[i-e] = 'a';
+                     }
+                  }
+                  let c = 1;
+                  while(arr[i+c] === 'a' || arr[i+c] === '-')
+                  {
+                     if(arr[i+c] === '-')
+                     {
+                        g = 1;
+                        arr[i+c] = 'a';
+                     }
+                     c++;
+                  }
+                  if((f===1 && g === 1) || (f===0 && g===0))
+                  {
+                     let a = parseFloat(arr[i-b])*parseFloat(arr[i+c]);
+                     arr[i-b] = `a`;
+                     arr[i+c] = `a`;
+                     arr[i] = a.toString(10);
+                  }
+                  if((f===0 && g === 1) || (f===1 && g===0))
+                  {
+                     let a = parseFloat(arr[i-b])*parseFloat(arr[i+c]);
+                     arr[i-b] = `-`; 
+                     arr[i+c] = `a`;
+                     arr[i] = a.toString(10);
+                  }
+               }
+               console.log(arr);
+               while(arr.includes('+') || arr.includes('-'))
+               {
+                  let strps = ``;
+                  let h;
+                     let p = arr.indexOf('+');
+                     let q = arr.indexOf('-');
+                     if(p !== -1 && q !== -1)
+                     {
+                        h = Math.min(p,q);
+                     }
+                     else if(p === -1)
+                     {
+                        h = q;
+                     }
+                     else if(q === -1)
+                     {
+                        h = p;
+                     }
+                     if(h === p)
+                     {
+                        arr[h] = 'a';
+                     }
+                     if(h === q)
+                     {
+                        strps += '-';
+                        arr[h] = 'a';
+                        for(let y=h+1;y<arr.length;y++)
+                        {
+                           if(arr[y] !== 'a')
+                           {
+                              strps += arr[y];
+                              arr[y] = strps;
+                              strps = ``;
+                              break;
+                           }
+                        }
+                     }
+                  }
+               console.log(arr);
+               let result = 0;
+               for(let j=0;j<arr.length;j++)
+               {
+                  if(arr[j] !== `a`)
+                  {
+                     result += parseFloat(arr[j]);
+                  }
+                  console.log(result);
+               }
+               document.querySelector('.display-output')
+                  .innerHTML = `${result}`;
+            }
+        </script>
+    </body>
+</html>
